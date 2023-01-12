@@ -49,3 +49,36 @@ p {
 
 
 /** CODIGO AQUI **/
+@media ( min-width: 768px ) {
+  .grid-container {
+    display: grid;
+    grid-template-areas: "left center rigth";
+    grid-template-columns: 20% 60% 20%;
+    grid-auto-flow: column;
+    column-gap: 2rem;
+  }
+  .main-container {
+    grid-area: center;
+  }
+  .sidebar-1 {
+    grid-area: left;
+  }
+
+  /* 
+  Another option 
+  .grid-container {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-auto-flow: column;
+    column-gap: 2rem;
+  }
+
+  .main-container {
+    grid-column: 1/3;
+  }
+
+  .sidebar-1 {
+    grid-column: 1/2;
+  }
+  */
+}
