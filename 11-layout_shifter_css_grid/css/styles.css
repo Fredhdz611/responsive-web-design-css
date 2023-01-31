@@ -49,3 +49,36 @@ p {
 
 
 /** CODIGO AQUI **/
+@media ( min-width: 768px ) {
+  .layout-shifter {
+    display: grid;
+    grid-template-areas: 'main'
+                         'below';
+  }
+  .sidebar {
+    grid-area: below;
+  }
+  .main-container {
+    grid-area: main;
+    display: grid;
+    grid-template-areas: 'one two';
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .layout-shifter {
+    grid-template-areas: 'main sidebar';
+    column-gap: 3rem;
+  }
+  .sidebar {
+    grid-area: sidebar;
+  }
+  .main-container {
+      grid-area: main;
+      grid-template-areas: 'one'
+                           'two';
+      grid-template-columns: unset;
+  }
+}
