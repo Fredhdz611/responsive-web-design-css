@@ -37,3 +37,24 @@ p {
 }
 
 /** CODIGO AQUI **/
+/* El contenido fluye sobre el espacio que hay disponible en los margenes de izq y derecha */
+.contenedor {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+@media ( min-width: 768px ) {
+  .contenedor {
+    width: 80%;
+  }
+}
+@media (min-width: 992px) {
+    .contenedor {
+        width: 60%;
+    }
+}
+img {
+    /* si la img es pequeña no la fuerza a crecer, pero sigue siendo responsive*/
+    max-width: 100%; 
+}
