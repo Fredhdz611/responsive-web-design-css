@@ -49,3 +49,16 @@ p {
 
 
 /** CODIGO AQUI **/
+@media ( min-width: 768px ) {
+  .container-sidebar {
+    display: flex;
+    gap: 2rem;
+  }
+  /* Esto le dice a flex que por cada pixel que recibe el aside el article recibe 3, esto es el factor de crecimiento. */
+  aside {
+    flex: 1;
+  }
+  article {
+    flex: 3;
+  }
+}
